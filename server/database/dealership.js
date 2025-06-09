@@ -1,4 +1,5 @@
-/* eslint-env es6 */
+/* eslint-env es6, node */
+/* eslint-disable dot-notation */
 const mongoose = require('mongoose');
 
 const Schema = mongoose.Schema;
