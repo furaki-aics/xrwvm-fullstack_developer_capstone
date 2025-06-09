@@ -24,11 +24,11 @@ const Login = ({ onClose }) => {
             "password": password
         }),
     });
-    
+
     const json = await res.json();
     if (json.status != null && json.status === "Authenticated") {
         sessionStorage.setItem('username', json.userName);
-        setOpen(false);        
+        setOpen(false);
     }
     else {
       alert("The user could not be authenticated.")
@@ -38,7 +38,7 @@ const Login = ({ onClose }) => {
   if (!open) {
     window.location.href = "/";
   };
-  
+
 
   return (
     <div>
@@ -57,7 +57,7 @@ const Login = ({ onClose }) => {
               </div>
               <div>
               <span className="input_field">Password </span>
-              <input name="psw" type="password"  placeholder="Password" className="input_field" onChange={(e) => setPassword(e.target.value)}/>            
+              <input name="psw" type="password"  placeholder="Password" className="input_field" onChange={(e) => setPassword(e.target.value)}/>
               </div>
               <div>
               <input className="action_button" type="submit" value="Login"/>

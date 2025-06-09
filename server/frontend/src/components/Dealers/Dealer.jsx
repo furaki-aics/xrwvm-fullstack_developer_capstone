@@ -23,13 +23,13 @@ const Dealer = () => {
   let dealer_url = root_url+`djangoapp/dealer/${id}`;
   let reviews_url = root_url+`djangoapp/reviews/dealer/${id}`;
   let post_review = root_url+`postreview/${id}`;
-  
+
   const get_dealer = async ()=>{
     const res = await fetch(dealer_url, {
       method: "GET"
     });
     const retobj = await res.json();
-    
+
     if(retobj.status === 200) {
       let dealerobjs = Array.from(retobj.dealer)
       setDealer(dealerobjs[0])
@@ -41,7 +41,7 @@ const Dealer = () => {
       method: "GET"
     });
     const retobj = await res.json();
-    
+
     if(retobj.status === 200) {
       if(retobj.reviews.length > 0){
         setReviews(retobj.reviews)
@@ -62,9 +62,9 @@ const Dealer = () => {
     if(sessionStorage.getItem("username")) {
       setPostReview(<a href={post_review}><img src={review_icon} style={{width:'10%',marginLeft:'10px',marginTop:'10px'}} alt='Post Review'/></a>)
 
-      
+
     }
-  },[]);  
+  },[]);
 
 
 return(
@@ -85,7 +85,7 @@ return(
           <div className="reviewer">{review.name} {review.car_make} {review.car_model} {review.car_year}</div>
         </div>
       ))}
-    </div>  
+    </div>
   </div>
 )
 }

@@ -27,7 +27,7 @@ try {
   Dealerships.deleteMany({}).then(()=>{
     Dealerships.insertMany(dealerships_data['dealerships']);
   });
-  
+
 } catch (error) {
   res.status(500).json({ error: 'Error fetching documents' });
 }

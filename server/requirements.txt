@@ -5,3 +5,7 @@ gunicorn
 python-dotenv
 flask
 nltk
+black
+flake8
+isort
+pre-commit

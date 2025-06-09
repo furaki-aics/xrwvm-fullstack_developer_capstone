@@ -2,4 +2,3 @@ superuser
 user: admin
 pass: 123456
 email: admin@bestcars.com
-

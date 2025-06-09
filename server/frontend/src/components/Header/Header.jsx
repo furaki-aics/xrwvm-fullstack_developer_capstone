@@ -9,7 +9,7 @@ const Header = () => {
     const res = await fetch(logout_url, {
       method: "GET",
     });
-  
+
     const json = await res.json();
     if (json) {
       let username = sessionStorage.getItem('username');
@@ -22,7 +22,7 @@ const Header = () => {
       alert("The user could not be logged out.")
     }
   };
-    
+
 //The default home page items are the login details panel
 let home_page_items =  <div></div>
 
