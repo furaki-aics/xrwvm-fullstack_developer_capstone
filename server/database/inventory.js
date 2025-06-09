@@ -1,6 +1,5 @@
 /* eslint-env es6, node */
 /* eslint-disable dot-notation */
-const { Int32 } = require('mongodb');
 const mongoose = require('mongoose');
 
 const Schema = mongoose.Schema;

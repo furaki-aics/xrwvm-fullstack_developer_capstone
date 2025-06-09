@@ -28,7 +28,7 @@ try {
     Dealerships.insertMany(dealerships_data.dealerships);
   });
 } catch (error) {
-  res.status(500).json({ error: 'Error fetching documents' });
+  console.error('Error initializing database:', error);
 }
 
 // Express route to home
