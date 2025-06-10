@@ -3,9 +3,28 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\"",
+    "dev:backend": "python manage.py runserver 0.0.0.0:8000",
+    "dev:frontend": "cd frontend && npm start",
+    "dev:frontend-only": "cd frontend && npm start",
+    "dev:backend-only": "python manage.py runserver 0.0.0.0:8000",
+    "install:frontend": "cd frontend && npm install",
+    "build:frontend": "cd frontend && npm run build",
+    "clean": "rm -rf frontend/build && rm -rf node_modules && rm -rf frontend/node_modules"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/eslint-parser": "^7.27.5",
+    "@babel/preset-react": "^7.27.1",
+    "concurrently": "^8.2.2",
+    "eslint": "^9.28.0",
+    "eslint-plugin-react": "^7.37.5",
+    "globals": "^15.12.0"
+  }
 }

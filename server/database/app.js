@@ -1,5 +1,5 @@
 /* eslint-env es6, node */
-/* eslint-disable dot-notation */
+
 const express = require('express');
 const mongoose = require('mongoose');
 const fs = require('fs');
